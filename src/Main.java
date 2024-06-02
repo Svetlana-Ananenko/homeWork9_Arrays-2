@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -68,13 +70,39 @@ public class Main {
 
         System.out.println("___Задача №4___");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        int length = reverseFullName.length;
-        // System.out.print(length);
 
+        char temp;
         for (int i = reverseFullName.length-1; i >=0 ; i--) {
             System.out.print(reverseFullName[i]);
         }
 
+        System.out.println("____________");
+
+        for (int i = 0; i < reverseFullName.length/2 ; i++) {
+            temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length-1-i];
+            reverseFullName[reverseFullName.length - 1 - i] = temp;
+
+
+        }
+        System.out.print(Arrays.toString(reverseFullName));
+
+
+
+
+        System.out.println("___Задача №4___");
+        char[] reverseFullName2 = { 'a', 't', 'e', 'v', 'S'};
+
+        char temp2 ;
+
+            for (int i = 0; i < reverseFullName2.length/2 ; i++) {
+            temp2 = reverseFullName2[i];
+            reverseFullName2[i] = reverseFullName2[reverseFullName2.length-1-i];
+            reverseFullName2[reverseFullName2.length - 1 - i] = temp2;
+
+
+        }
+        System.out.print(Arrays.toString(reverseFullName2));
 
 
     }
